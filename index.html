@@ -1,0 +1,90 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>Scratch book</title>
+		<!-- Sylesheets -->
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Aladin" rel="stylesheet">
+
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#transitions">Transitions</a></li>
+					<li><a href="#features">Slide Up Box</a></li>
+					<li><a href="#positioning">Positioning</a></li>
+					<li><a href="#moving-bg">Animations</a></li>
+				</ul>
+			<nav>
+		</header>
+		
+		<section id="home">
+			<div class="tagline">
+				<h1>Welcome!</h1>
+				<h2>Let's get started with some awesome css3 properties</h2>
+			</div>
+			<div class="scroll-me">
+				<a href="#transitions"><i class="fa fa-ellipsis-v"></i></a>
+			</div>	
+		</section>
+		
+		<section id="transitions" class="page">
+			<div class="section-desc">
+				<h2 class="title">Transitions</h2>
+				<p class="desc">Here we will have a look at css3 transitions</p>
+			</div>
+			<div class="">
+				<div class="box">
+				</div>
+			</div>
+		</section>	
+		
+		<section id="features" class="page">
+			<div class="section-desc">
+				<h2 class="title">Slide Up box</h2>
+				<p class="desc">Here we will have at how to create slide up box. <br>Take note that this section has a <strong>linear greadient</strong> background.</p>
+			</div>	
+		</section>
+		
+		<section id="positioning" class="page">
+			<div class="section-desc">
+				<h2 class="title">Positioning</h2>
+				<p>Here we will have a look at absolute and relative positioning, and how to use it to vertically and horizontally center text inside a div.</p>
+			</div>
+			<div class="canvas">
+				<div class="card">
+					<p class="random-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+				
+			</div>
+			
+		</section>
+		<section id="moving-bg" class="page">
+			<div class="section-desc">
+				<h2 class="title">Moving Background</h2>
+				<p class="desc">Here we will use css animations to move the background to the left</p>
+			</div>
+		</section>
+		<div class="scroll-up">
+			<a href="#home"><i class="fa fa-hand-o-up"></i></a>
+		</div>
+
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script>
+			$('a[href^="#"]').on('click', function(event) {
+			    var target = $(this.getAttribute('href'));
+			    if( target.length ) {
+			        event.preventDefault();
+			        $('html, body').stop().animate({
+			            scrollTop: target.offset().top
+			        }, 1000);
+			    }
+			});
+		</script>
+	</body>
+</html>
